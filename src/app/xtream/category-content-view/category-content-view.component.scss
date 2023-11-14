@@ -1,0 +1,64 @@
+:host {
+    display: block;
+    padding: 20px;
+}
+
+mat-card {
+    overflow: hidden;
+    transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+mat-card:hover {
+    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    mat-card {
+        cursor: pointer;
+        width: 170px;
+
+        mat-card-content {
+            padding: 0;
+            margin: 0;
+        }
+
+        .stream-icon {
+            width: 100%;
+            display: block;
+        }
+
+        .stream-icon-placeholder {
+            width: 100%;
+            background: #999;
+            max-height: 300px;
+            min-height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: 'No cover';
+            }
+        }
+
+        .title {
+            word-break: break-all;
+            padding: 8px;
+        }
+    }
+}
+
+.no-content {
+    text-align: center;
+
+    .icon {
+        font-size: 64px;
+        height: 64px;
+        width: 64px;
+    }
+}
